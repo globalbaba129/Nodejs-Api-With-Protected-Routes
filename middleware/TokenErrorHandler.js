@@ -12,7 +12,7 @@ export const tokenHandler = asyncHandler(async (req, res, next) => {
 
             const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-            req.user = decoded; // You can also fetch full user info from DB here if needed
+            req.user = decoded; 
 
             next();
         } catch (error) {
